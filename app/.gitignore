@@ -1,0 +1,10 @@
+/build
+/debug
+*.jks
+*.old
+google-services.json
+keystore password.txt
+*pepk
+SHA signing keys.txt
+*.pem
+*.log

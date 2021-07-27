@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="5dp"
+    tools:context=".activity.AddressActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+
+            <EditText
+                android:id="@+id/ed_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="Name"
+                android:background="@drawable/rounded_editetext"
+                android:hint="Name"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/colorBalck" />
+
+            <EditText
+                android:id="@+id/ed_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:autofillHints="Address"
+                android:background="@drawable/rounded_editetext"
+                android:hint="Address Type"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/colorBalck" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/ed_hoousno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1.5"
+                    android:autofillHints="House Number"
+                    android:background="@drawable/rounded_editetext"
+                    android:hint="House No"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBalck" />
+
+
+                <EditText
+                    android:id="@+id/ed_society"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:autofillHints="Society"
+                    android:background="@drawable/rounded_editetext"
+                    android:hint="Society"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBalck" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="2dp"
+                android:text="Area"
+                android:textColor="@color/colorBalck"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_editetext">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:prompt="@string/spinner_title" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/ed_landmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:autofillHints="Landmark"
+                android:background="@drawable/rounded_editetext"
+                android:hint="Landmark"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/colorBalck" />
+
+
+            <EditText
+                android:id="@+id/ed_pinno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:autofillHints="Pincode"
+                android:background="@drawable/rounded_editetext"
+                android:hint="Pincode"
+                android:inputType="number"
+                android:maxLength="6"
+                android:padding="10dp"
+                android:textColor="@color/colorBalck" />
+
+
+            <Button
+                android:id="@+id/bt_picker"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorAccent"
+                android:elevation="20dp"
+                android:hapticFeedbackEnabled="true"
+                android:text="Get Location From Map"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:elevation="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txt_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="Save"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

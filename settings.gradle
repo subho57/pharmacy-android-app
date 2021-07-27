@@ -1,0 +1,2 @@
+rootProject.name = 'Calcutta Medical Stores'
+include ':app'

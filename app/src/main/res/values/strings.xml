@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Calcutta Medical Stores</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="sing">Sign Up</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="spinner_title">Select Area</string>
+
+    <string name="pic_myslf">Pickup Myself</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

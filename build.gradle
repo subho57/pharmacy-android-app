@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath 'com.google.gms:google-services:4.3.8'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.7.1'
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.10, 0.99.99]'
+    }
+}
+allprojects {
+    repositories {
+        google()  // Google's Maven repository
+        mavenCentral()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://artifactory.paytm.in/libs-release-local' }
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
