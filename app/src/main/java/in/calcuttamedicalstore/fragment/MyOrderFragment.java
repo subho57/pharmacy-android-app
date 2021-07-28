@@ -3,6 +3,7 @@ package in.calcuttamedicalstore.fragment;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -122,7 +123,7 @@ public class MyOrderFragment extends Fragment implements GetResult.MyListener {
         }
 
       } else if (callNo.equalsIgnoreCase("2")) {
-        // Log.e("Response", "-->" + result);
+        Log.e("Response", "-->" + result);
         Gson gson = new Gson();
         RestResponse response = gson.fromJson(result.toString(), RestResponse.class);
         Toast.makeText(getActivity(), response.getResponseMsg(), Toast.LENGTH_LONG).show();

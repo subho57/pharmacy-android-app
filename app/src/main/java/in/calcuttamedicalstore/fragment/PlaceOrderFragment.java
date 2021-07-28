@@ -2,6 +2,7 @@ package in.calcuttamedicalstore.fragment;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -120,7 +121,7 @@ public class PlaceOrderFragment extends Fragment
     try {
       if (callNo.equalsIgnoreCase("1")) {
         RadioButton rdbtn = null;
-        // Log.e("Response", "->" + result);
+        Log.e("Response", "->" + result);
         Gson gson = new Gson();
         Times times = gson.fromJson(result.toString(), Times.class);
         for (int i = 0; i < times.getData().size(); i++) {
@@ -227,7 +228,7 @@ public class PlaceOrderFragment extends Fragment
       strDate = sdf.parse(dt);
       assert strDate != null;
       if ((System.currentTimeMillis() + 432000000) < strDate.getTime()) {
-        // Log.e("date change ", "--> 1");
+        Log.e("date change ", "--> 1");
         return;
       }
     } catch (ParseException e) {
@@ -256,7 +257,7 @@ public class PlaceOrderFragment extends Fragment
       strDate = sdf.parse(dt);
       assert strDate != null;
       if ((System.currentTimeMillis() + 86400000) > strDate.getTime()) {
-        // Log.e("date change ", "--> 1");
+        Log.e("date change ", "--> 1");
         return;
       }
     } catch (ParseException e) {

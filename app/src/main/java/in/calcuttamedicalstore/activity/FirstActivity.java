@@ -4,6 +4,7 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.util.Pair;
 
 import androidx.appcompat.app.AlertDialog;
@@ -49,7 +50,7 @@ public class FirstActivity extends ActivityManagePermission {
                     .setPositiveButton(
                         "Exit",
                         (dialog, id) -> {
-                          // Log.e("tem", dialog + "" + id);
+                          Log.e("tem", dialog + "" + id);
                           finish();
                         });
                 AlertDialog alert = builder.create();

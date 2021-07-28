@@ -3,6 +3,7 @@ package in.calcuttamedicalstore.activity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -85,7 +86,7 @@ public class ForgotActivity extends AppCompatActivity implements GetResult.MyLis
 
           @Override
           public void onNothingSelected(AdapterView<?> parent) {
-            // Log.e("tem", parent.toString());
+            Log.e("tem", parent.toString());
           }
         });
   }

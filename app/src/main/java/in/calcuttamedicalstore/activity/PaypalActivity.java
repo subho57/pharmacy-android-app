@@ -3,6 +3,7 @@ package in.calcuttamedicalstore.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -86,21 +87,21 @@ public class PaypalActivity extends AppCompatActivity {
             data.getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
         if (confirm != null) {
           try {
-            // Log.e("TAG", confirm.toJSONObject().toString(4));
-            // Log.e("TAG", confirm.getPayment().toJSONObject().toString(4));
+            Log.e("TAG", confirm.toJSONObject().toString(4));
+            Log.e("TAG", confirm.getPayment().toJSONObject().toString(4));
 
             JSONObject jsonDetails = new JSONObject(confirm.toJSONObject().toString(4));
             showDetails(jsonDetails.getJSONObject("response"));
 
           } catch (JSONException e) {
-            // Log.e("TAG", "failure occurred: ", e);
+            Log.e("TAG", "failure occurred: ", e);
           }
         }
       } else if (resultCode == Activity.RESULT_CANCELED) {
         finish();
       } else if (resultCode == PaymentActivity.RESULT_EXTRAS_INVALID) {
-        // Log.e("TAG", "An invalid Payment or PayPalConfiguration was submitted. Please see the
-        // docs.");
+        Log.e(
+            "TAG", "An invalid Payment or PayPalConfiguration was submitted. Please see the docs.");
       }
     } else if (requestCode == REQUEST_CODE_FUTURE_PAYMENT) {
       if (resultCode == Activity.RESULT_OK) {
@@ -112,10 +113,11 @@ public class PaypalActivity extends AppCompatActivity {
         }
       } else if (resultCode == Activity.RESULT_CANCELED) {
         finish();
-        // Log.e("FuturePaymentExample", "The user canceled.");
+        Log.e("FuturePaymentExample", "The user canceled.");
       } else if (resultCode == PayPalFuturePaymentActivity.RESULT_EXTRAS_INVALID) {
-        // Log.e("FuturePaymentExample", "Probably the attempt to previously start the PayPalService
-        // had an invalid PayPalConfiguration. Please see the docs.");
+        Log.e(
+            "FuturePaymentExample",
+            "Probably the attempt to previously start the PayPalService had an invalid PayPalConfiguration. Please see the docs.");
       }
     } else if (requestCode == REQUEST_CODE_PROFILE_SHARING) {
       if (resultCode == Activity.RESULT_OK) {
@@ -125,11 +127,12 @@ public class PaypalActivity extends AppCompatActivity {
           displayResultText("Profile Sharing code received from PayPal");
         }
       } else if (resultCode == Activity.RESULT_CANCELED) {
-        // Log.e("ProfileSharingExample", "The user canceled.");
+        Log.e("ProfileSharingExample", "The user canceled.");
         finish();
       } else if (resultCode == PayPalFuturePaymentActivity.RESULT_EXTRAS_INVALID) {
-        // Log.e("ProfileSharingExample", "Probably the attempt to previously start the
-        // PayPalService had an invalid PayPalConfiguration. Please see the docs.");
+        Log.e(
+            "ProfileSharingExample",
+            "Probably the attempt to previously start the PayPalService had an invalid PayPalConfiguration. Please see the docs.");
       }
     }
   }

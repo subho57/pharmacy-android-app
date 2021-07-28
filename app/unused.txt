@@ -17649,7 +17649,6 @@ com.paypal.android.sdk.payments.PayPalFuturePaymentActivity:
 com.paypal.android.sdk.payments.PayPalItem:
     public void <init>(java.lang.String,java.lang.Integer,java.math.BigDecimal,java.lang.String,java.lang.String)
     public static java.math.BigDecimal getItemTotal(com.paypal.android.sdk.payments.PayPalItem[])
-    public static org.json.JSONArray toJSONArray(com.paypal.android.sdk.payments.PayPalItem[])
 com.paypal.android.sdk.payments.PayPalPayment:
     public static final java.lang.String PAYMENT_INTENT_AUTHORIZE
     public static final java.lang.String PAYMENT_INTENT_ORDER
@@ -17664,10 +17663,8 @@ com.paypal.android.sdk.payments.PayPalPayment:
     public final com.paypal.android.sdk.payments.PayPalPayment paymentDetails(com.paypal.android.sdk.payments.PayPalPaymentDetails)
     public final com.paypal.android.sdk.payments.PayPalPayment providedShippingAddress(com.paypal.android.sdk.payments.ShippingAddress)
     public final com.paypal.android.sdk.payments.PayPalPayment softDescriptor(java.lang.String)
-    public final org.json.JSONObject toJSONObject()
 com.paypal.android.sdk.payments.PayPalPaymentDetails:
     public void <init>(java.math.BigDecimal,java.math.BigDecimal,java.math.BigDecimal)
-    public final org.json.JSONObject toJSONObject()
 com.paypal.android.sdk.payments.PayPalProfileSharingActivity:
     public static final java.lang.String EXTRA_REQUESTED_SCOPES
     public static final java.lang.String EXTRA_RESULT_AUTHORIZATION
@@ -17680,7 +17677,6 @@ com.paypal.android.sdk.payments.PaymentActivity:
     public static final int RESULT_EXTRAS_INVALID
 com.paypal.android.sdk.payments.PaymentConfirmation:
     public final java.lang.String getEnvironment()
-    public final com.paypal.android.sdk.payments.PayPalPayment getPayment()
     public final com.paypal.android.sdk.payments.ProofOfPayment getProofOfPayment()
 com.paypal.android.sdk.payments.ProofOfPayment:
     public final java.lang.String getCreateTime()
@@ -42581,7 +42577,6 @@ com.paypal.android.sdk.payments.PayPalPayment:
     public final java.lang.String j()
     public final java.lang.String k()
 com.paypal.android.sdk.payments.PayPalPaymentDetails:
-    public static final java.lang.String a
     public void <init>(android.os.Parcel)
     public final java.math.BigDecimal getShipping()
     public final java.math.BigDecimal getSubtotal()
@@ -42685,6 +42680,7 @@ com.paypal.android.sdk.payments.PaymentConfirmActivity:
     public static synthetic void k(com.paypal.android.sdk.payments.PaymentConfirmActivity)
 com.paypal.android.sdk.payments.PaymentConfirmation:
     public void <init>(android.os.Parcel)
+    public final com.paypal.android.sdk.payments.PayPalPayment getPayment()
 com.paypal.android.sdk.payments.PaymentMethodActivity:
     public static synthetic com.paypal.android.sdk.payments.PayPalService a(com.paypal.android.sdk.payments.PaymentMethodActivity,com.paypal.android.sdk.payments.PayPalService)
     public static synthetic java.lang.String a()
@@ -43344,10 +43340,10 @@ in.calcuttamedicalstore.activity.ItemDetailsActivity:
     public void fragment()
     private void lambda$setJoinPlayrList$0(int[],android.widget.TextView,android.widget.LinearLayout,android.widget.LinearLayout,in.calcuttamedicalstore.database.DatabaseHelper,in.calcuttamedicalstore.database.MyCart,android.view.View)
     public void lambda$setJoinPlayrList$0$ItemDetailsActivity(int[],android.widget.TextView,android.widget.LinearLayout,android.widget.LinearLayout,in.calcuttamedicalstore.database.DatabaseHelper,in.calcuttamedicalstore.database.MyCart,android.view.View)
-    private void lambda$setJoinPlayrList$1(int[],android.widget.TextView,in.calcuttamedicalstore.database.MyCart,android.view.View)
-    public void lambda$setJoinPlayrList$1$ItemDetailsActivity(int[],android.widget.TextView,in.calcuttamedicalstore.database.MyCart,android.view.View)
-    private void lambda$setJoinPlayrList$2(android.widget.LinearLayout,android.widget.LinearLayout,int[],android.widget.TextView,in.calcuttamedicalstore.database.MyCart,android.view.View)
-    public void lambda$setJoinPlayrList$2$ItemDetailsActivity(android.widget.LinearLayout,android.widget.LinearLayout,int[],android.widget.TextView,in.calcuttamedicalstore.database.MyCart,android.view.View)
+    private void lambda$setJoinPlayrList$1(int[],android.widget.TextView,in.calcuttamedicalstore.database.MyCart,in.calcuttamedicalstore.database.DatabaseHelper,android.view.View)
+    public void lambda$setJoinPlayrList$1$ItemDetailsActivity(int[],android.widget.TextView,in.calcuttamedicalstore.database.MyCart,in.calcuttamedicalstore.database.DatabaseHelper,android.view.View)
+    private void lambda$setJoinPlayrList$2(android.widget.LinearLayout,android.widget.LinearLayout,int[],android.widget.TextView,in.calcuttamedicalstore.database.MyCart,in.calcuttamedicalstore.database.DatabaseHelper,android.view.View)
+    public void lambda$setJoinPlayrList$2$ItemDetailsActivity(android.widget.LinearLayout,android.widget.LinearLayout,int[],android.widget.TextView,in.calcuttamedicalstore.database.MyCart,in.calcuttamedicalstore.database.DatabaseHelper,android.view.View)
     public final void reletedProduct()
     public final void setJoinPlayrList(android.widget.LinearLayout,in.calcuttamedicalstore.model.ProductItem,in.calcuttamedicalstore.model.Price)
 in.calcuttamedicalstore.activity.ItemDetailsActivity_ViewBinding$1:
@@ -43389,7 +43385,7 @@ in.calcuttamedicalstore.activity.PaytmActivity$1:
     public void someUIErrorOccurred(java.lang.String)
 in.calcuttamedicalstore.activity.PaytmActivity:
     public final int ActivityRequestCode
-    public static final java.lang.String TAG
+    public static synthetic java.lang.String access$000()
     public final void initiateTransaction()
 in.calcuttamedicalstore.activity.PopRatesActivity:
     public final void UserFeedBack()
@@ -43421,7 +43417,6 @@ in.calcuttamedicalstore.activity.RatesActivity_ViewBinding$3:
 in.calcuttamedicalstore.activity.RatesActivity_ViewBinding$4:
     public final synthetic in.calcuttamedicalstore.activity.RatesActivity_ViewBinding this$0
 in.calcuttamedicalstore.activity.RazerpayActivity:
-    public static final java.lang.String TAG
     public void createOrder()
     public void startPayment()
 in.calcuttamedicalstore.activity.SelectAreaActivity:
@@ -43476,8 +43471,8 @@ in.calcuttamedicalstore.adapter.ItemAdp:
     private synthetic void lambda$onBindViewHolder$0(in.calcuttamedicalstore.model.ProductItem,android.view.View)
     public synthetic void lambda$onBindViewHolder$0$ItemAdp(in.calcuttamedicalstore.model.ProductItem,android.view.View)
     public static void lambda$setJoinPlayrList$1(int[],android.widget.TextView,android.widget.LinearLayout,android.widget.LinearLayout,in.calcuttamedicalstore.database.DatabaseHelper,in.calcuttamedicalstore.database.MyCart,android.view.View)
-    public static void lambda$setJoinPlayrList$2(int[],android.widget.TextView,in.calcuttamedicalstore.database.MyCart,android.view.View)
-    public static void lambda$setJoinPlayrList$3(android.widget.LinearLayout,android.widget.LinearLayout,int[],android.widget.TextView,in.calcuttamedicalstore.database.MyCart,android.view.View)
+    public static void lambda$setJoinPlayrList$2(int[],android.widget.TextView,in.calcuttamedicalstore.database.MyCart,in.calcuttamedicalstore.database.DatabaseHelper,android.view.View)
+    public static void lambda$setJoinPlayrList$3(android.widget.LinearLayout,android.widget.LinearLayout,int[],android.widget.TextView,in.calcuttamedicalstore.database.MyCart,in.calcuttamedicalstore.database.DatabaseHelper,android.view.View)
     public void onBindViewHolder(in.calcuttamedicalstore.adapter.ItemAdp$ViewHolder,int)
     public in.calcuttamedicalstore.adapter.ItemAdp$ViewHolder onCreateViewHolder(android.view.ViewGroup)
     public final void setJoinPlayrList(android.widget.LinearLayout,in.calcuttamedicalstore.model.ProductItem,in.calcuttamedicalstore.model.Price)

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -285,7 +286,7 @@ public class VerifyPhoneActivity extends AppCompatActivity implements GetResult.
   @Override
   public void callback(JsonObject result, String callNo) {
     try {
-      // Log.e("response", "--->" + result);
+      Log.e("response", "--->" + result);
       custPrograssbar.closePrograssBar();
       if (callNo.equalsIgnoreCase("1")) {
         isvarification = -1;

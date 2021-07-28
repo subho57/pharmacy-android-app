@@ -26,9 +26,9 @@ public class GetResult {
             @Override
             public void onResponse(
                 @NotNull Call<JsonObject> call, @NotNull Response<JsonObject> response) {
-              // Log.e("message", " : " + response.message());
-              // Log.e("body", " : " + response.body());
-              // Log.e("callno", " : " + callno);
+              //              Log.e("message", " : " + response.message());
+              //              Log.e("body", " : " + response.body());
+              //              Log.e("callno", " : " + callno);
               myListener.callback(response.body(), callno);
             }
 

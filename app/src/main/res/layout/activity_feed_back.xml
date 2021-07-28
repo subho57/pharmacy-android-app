@@ -71,7 +71,7 @@
                 android:layout_height="48dp"
                 android:layout_gravity="bottom|center"
                 android:layout_marginBottom="22dp"
-                android:background="@color/colorAccent"
+                android:background="@drawable/submit_btn_background"
                 android:elevation="5dp"
                 android:gravity="center"
                 android:padding="5dp"

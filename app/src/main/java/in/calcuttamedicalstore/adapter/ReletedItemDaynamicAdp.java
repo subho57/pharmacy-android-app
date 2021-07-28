@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -120,7 +121,7 @@ public class ReletedItemDaynamicAdp
             myCart.setCost(datum.getPrice().get(0).getProductPrice());
             myCart.setQty("1");
             myCart.setDiscount(datum.getmDiscount());
-            // Log.e("INsert", "--> " + helper.insertData(myCart));
+            Log.e("INsert", "--> " + helper.insertData(myCart));
             holder.lvlCardbg.setBackground(
                 mContext.getResources().getDrawable(R.drawable.bg_red_shape));
             holder.imgCard.setImageDrawable(mContext.getDrawable(R.drawable.ic_minus_rounded));

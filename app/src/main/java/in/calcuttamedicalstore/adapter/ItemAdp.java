@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -194,7 +195,7 @@ public class ItemAdp extends RecyclerView.Adapter<ItemAdp.ViewHolder> {
           count[0] = count[0] + 1;
           txtcount.setText("" + count[0]);
           myCart.setQty(String.valueOf(count[0]));
-          // Log.e("INsert", "--> " + helper.insertData(myCart));
+          Log.e("INsert", "--> " + helper.insertData(myCart));
           itemListFragment.updateItem();
         });
     lvl_addcart.setOnClickListener(
@@ -205,7 +206,7 @@ public class ItemAdp extends RecyclerView.Adapter<ItemAdp.ViewHolder> {
           count[0] = count[0] + 1;
           txtcount.setText("" + count[0]);
           myCart.setQty(String.valueOf(count[0]));
-          // Log.e("INsert", "--> " + helper.insertData(myCart));
+          Log.e("INsert", "--> " + helper.insertData(myCart));
           itemListFragment.updateItem();
         });
     lnrView.addView(view);

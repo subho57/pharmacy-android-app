@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
@@ -248,7 +249,7 @@ public class HomeActivity extends AppCompatActivity {
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu_icon);
     char first = user.getName().charAt(0);
-    // Log.e("first", "-->" + first);
+    Log.e("first", "-->" + first);
     txtfirstl.setText("" + first);
 
     txtMob.setText("" + user.getMobile());
@@ -292,7 +293,7 @@ public class HomeActivity extends AppCompatActivity {
 
               Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fragment_frame);
               if (fragment instanceof HomeFragment && fragment.isVisible()) {
-                // Log.e("no", "jsd");
+                Log.e("no", "jsd");
               } else {
                 getSupportFragmentManager().popBackStackImmediate();
               }

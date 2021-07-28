@@ -3,6 +3,7 @@ package in.calcuttamedicalstore.activity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -97,7 +98,7 @@ public class RatesActivity extends BaseActivity implements GetResult.MyListener 
   @Override
   public void callback(JsonObject result, String callNo) {
     custPrograssbar.closePrograssBar();
-    // Log.e("Feedback Respons", ":" + result);
+    Log.e("Feedback Respons", ":" + result);
     if (result != null) {
       try {
         JSONObject object = new JSONObject(result.toString());

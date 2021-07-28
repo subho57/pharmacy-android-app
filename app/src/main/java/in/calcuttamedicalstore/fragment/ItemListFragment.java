@@ -3,6 +3,7 @@ package in.calcuttamedicalstore.fragment;
 import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -199,7 +200,7 @@ public class ItemListFragment extends Fragment implements GetResult.MyListener {
   }
 
   public void getSearch(String key) {
-    // Log.e("searchKey===", key + "");
+    Log.e("searchKey===", key + "");
 
     HomeActivity.custPrograssbar.prograssCreate(getActivity());
     JSONObject jsonObject = new JSONObject();
