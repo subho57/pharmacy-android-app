@@ -99,8 +99,8 @@
                     android:background="@drawable/rounded_editetext"
                     android:drawableStart="@drawable/ic_phone"
                     android:hint="Mobile"
-                    android:maxLength="10"
                     android:inputType="phone"
+                    android:maxLength="10"
                     android:padding="12dp"
                     android:textColor="@color/colorGrey2"
                     android:textColorHint="@color/colorGrey" />

@@ -45,26 +45,9 @@ import static in.calcuttamedicalstore.utils.Utiles.isvarification;
 
 @SuppressLint("NonConstantResourceId")
 public class VerifyPhoneActivity extends AppCompatActivity implements GetResult.MyListener {
+
   @BindView(R.id.txt_mob)
   TextView txtMob;
-
-  //  @BindView(R.id.ed_otp1)
-  //  TextInputEditText edOtp1;
-  //
-  //  @BindView(R.id.ed_otp2)
-  //  TextInputEditText edOtp2;
-  //
-  //  @BindView(R.id.ed_otp3)
-  //  TextInputEditText edOtp3;
-  //
-  //  @BindView(R.id.ed_otp4)
-  //  TextInputEditText edOtp4;
-  //
-  //  @BindView(R.id.ed_otp5)
-  //  TextInputEditText edOtp5;
-  //
-  //  @BindView(R.id.ed_otp6)
-  //  TextInputEditText edOtp6;
 
   @BindView(R.id.ed_otp)
   OtpEditText edOtp;
@@ -80,8 +63,10 @@ public class VerifyPhoneActivity extends AppCompatActivity implements GetResult.
   CustPrograssbar custPrograssbar;
   SessionManager sessionManager;
   User user;
+
   private String verificationId;
   private FirebaseAuth mAuth;
+
   private final PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallBack =
       new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
         @Override
@@ -147,7 +132,7 @@ public class VerifyPhoneActivity extends AppCompatActivity implements GetResult.
             + phonenumber
             + "\n with 6 digit verification code");
     try {
-      new CountDownTimer(60000, 1000) {
+      new CountDownTimer(120000, 1000) {
         @Override
         public void onTick(long millisUntilFinished) {
           long seconds = TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished);
@@ -209,7 +194,7 @@ public class VerifyPhoneActivity extends AppCompatActivity implements GetResult.
     PhoneAuthOptions options =
         PhoneAuthOptions.newBuilder(mAuth)
             .setPhoneNumber(number) // Phone number to verify
-            .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+            .setTimeout(120L, TimeUnit.SECONDS) // Timeout and unit
             .setActivity(this) // Activity (for callback binding)
             .setCallbacks(mCallBack) // OnVerificationStateChangedCallbacks
             .build();
@@ -222,18 +207,6 @@ public class VerifyPhoneActivity extends AppCompatActivity implements GetResult.
     switch (view.getId()) {
       case R.id.btn_send:
         if (validation()) {
-          //          verifyCode(
-          //              Objects.requireNonNull(edOtp1.getText()).toString()
-          //                  + ""
-          //                  + Objects.requireNonNull(edOtp2.getText()).toString()
-          //                  + ""
-          //                  + Objects.requireNonNull(edOtp3.getText()).toString()
-          //                  + ""
-          //                  + Objects.requireNonNull(edOtp4.getText()).toString()
-          //                  + ""
-          //                  + Objects.requireNonNull(edOtp5.getText()).toString()
-          //                  + ""
-          //                  + Objects.requireNonNull(edOtp6.getText()).toString());
           verifyCode(Objects.requireNonNull(edOtp.getText()).toString());
         }
         break;
@@ -241,7 +214,7 @@ public class VerifyPhoneActivity extends AppCompatActivity implements GetResult.
         btnReenter.setVisibility(View.GONE);
         btnTimer.setVisibility(View.VISIBLE);
         try {
-          new CountDownTimer(60000, 1000) {
+          new CountDownTimer(120000, 1000) {
             @SuppressLint("SetTextI18n")
             @Override
             public void onTick(long millisUntilFinished) {
@@ -346,36 +319,10 @@ public class VerifyPhoneActivity extends AppCompatActivity implements GetResult.
   }
 
   public boolean validation() {
-
     if (Objects.requireNonNull(edOtp.getText()).toString().length() != 6) {
       edOtp.setError("Enter 6 digit OTP");
       return false;
     }
-
-    //    if (Objects.requireNonNull(edOtp1.getText()).toString().isEmpty()) {
-    //      edOtp1.setError("");
-    //      return false;
-    //    }
-    //    if (Objects.requireNonNull(edOtp2.getText()).toString().isEmpty()) {
-    //      edOtp2.setError("");
-    //      return false;
-    //    }
-    //    if (Objects.requireNonNull(edOtp3.getText()).toString().isEmpty()) {
-    //      edOtp3.setError("");
-    //      return false;
-    //    }
-    //    if (Objects.requireNonNull(edOtp4.getText()).toString().isEmpty()) {
-    //      edOtp4.setError("");
-    //      return false;
-    //    }
-    //    if (Objects.requireNonNull(edOtp5.getText()).toString().isEmpty()) {
-    //      edOtp5.setError("");
-    //      return false;
-    //    }
-    //    if (Objects.requireNonNull(edOtp6.getText()).toString().isEmpty()) {
-    //      edOtp6.setError("");
-    //      return false;
-    //    }
     return true;
   }
 }

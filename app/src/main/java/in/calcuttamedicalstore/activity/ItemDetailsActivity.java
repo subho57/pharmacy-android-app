@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Paint;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -287,7 +286,7 @@ public class ItemDetailsActivity extends AppCompatActivity
           count[0] = count[0] + 1;
           txtcount.setText("" + count[0]);
           myCart.setQty(String.valueOf(count[0]));
-          Log.e("Insert", "--> " + helper.insertData(myCart));
+          // Log.e("Insert", "--> " + helper.insertData(myCart));
           updateItem();
           if (ItemListFragment.itemListFragment != null)
             ItemListFragment.itemListFragment.updateItem();
@@ -301,7 +300,7 @@ public class ItemDetailsActivity extends AppCompatActivity
           count[0] = count[0] + 1;
           txtcount.setText("" + count[0]);
           myCart.setQty(String.valueOf(count[0]));
-          Log.e("INsert", "--> " + helper.insertData(myCart));
+          // Log.e("INsert", "--> " + helper.insertData(myCart));
           updateItem();
           if (ItemListFragment.itemListFragment != null)
             ItemListFragment.itemListFragment.updateItem();

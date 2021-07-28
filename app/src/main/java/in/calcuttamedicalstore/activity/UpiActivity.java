@@ -6,7 +6,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -122,20 +121,19 @@ public class UpiActivity extends AppCompatActivity {
       if ((RESULT_OK == resultCode) || (resultCode == 11)) {
         if (data != null) {
           String trxt = data.getStringExtra("response");
-          Log.d("UPI", "onActivityResult: " + trxt);
+          // Log.d("UPI", "onActivityResult: " + trxt);
           ArrayList<String> dataList = new ArrayList<>();
           dataList.add(trxt);
           upiPaymentDataOperation(dataList);
         } else {
-          Log.d("UPI", "onActivityResult: " + "Return data is null");
+          // Log.d("UPI", "onActivityResult: " + "Return data is null");
           ArrayList<String> dataList = new ArrayList<>();
           dataList.add("nothing");
           upiPaymentDataOperation(dataList);
         }
       } else {
-        Log.d(
-            "UPI",
-            "onActivityResult: " + "Return data is null"); // when user simply backs without payment
+        // Log.d("UPI", "onActivityResult: " + "Return data is null"); // when user simply backs
+        // without payment
         ArrayList<String> dataList = new ArrayList<>();
         dataList.add("nothing");
         upiPaymentDataOperation(dataList);
@@ -146,7 +144,7 @@ public class UpiActivity extends AppCompatActivity {
   private void upiPaymentDataOperation(ArrayList<String> data) {
     if (isConnectionAvailable(this)) {
       String str = data.get(0);
-      Log.d("UPIPAY", "upiPaymentDataOperation: " + str);
+      // Log.d("UPIPAY", "upiPaymentDataOperation: " + str);
       String paymentCancel = "";
       if (str == null) str = "discard";
       String status = "";
@@ -171,7 +169,7 @@ public class UpiActivity extends AppCompatActivity {
         tragectionID = approvalRefNo;
         paymentsucsses = 1;
         Toast.makeText(this, "Transaction Successful!!", Toast.LENGTH_SHORT).show();
-        Log.d("UPI", "responseStr: " + approvalRefNo);
+        // Log.d("UPI", "responseStr: " + approvalRefNo);
       } else if ("Payment cancelled by user.".equalsIgnoreCase(paymentCancel)) {
         Toast.makeText(this, "Payment cancelled by User.", Toast.LENGTH_SHORT).show();
       } else {

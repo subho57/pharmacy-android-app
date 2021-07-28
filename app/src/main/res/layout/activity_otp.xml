@@ -215,7 +215,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="20dp"
-                    android:background="@color/colorPrimary"
+                    android:background="@drawable/submit_btn_background"
                     android:elevation="10dp"
                     android:gravity="center"
                     android:text="Submit"

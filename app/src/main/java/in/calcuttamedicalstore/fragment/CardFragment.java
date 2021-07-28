@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -302,7 +301,7 @@ public class CardFragment extends Fragment {
                     .setPositiveButton(
                         "Delete",
                         (dialog, whichButton) -> {
-                          Log.d("sdj", "" + whichButton);
+                          // Log.d("sdj", "" + whichButton);
                           dialog.dismiss();
                           totalAmount[0] = totalAmount[0] - Double.parseDouble(myCart.getCost());
                           helper.deleteRData(myCart.getPid(), myCart.getCost());
@@ -313,7 +312,7 @@ public class CardFragment extends Fragment {
                     .setNegativeButton(
                         "cancel",
                         (dialog, which) -> {
-                          Log.d("sdj", "" + which);
+                          // Log.d("sdj", "" + which);
                           dialog.dismiss();
                         })
                     .create();

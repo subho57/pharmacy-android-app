@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 import android.widget.EditText;
@@ -132,7 +131,7 @@ public class LoginActivity extends AppCompatActivity implements GetResult.MyList
         finish();
       }
     } catch (Exception e) {
-      Log.e("error", " --> " + e.toString());
+      // Log.e("error", " --> " + e.toString());
     }
   }
 }

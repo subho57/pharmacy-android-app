@@ -49,7 +49,7 @@
         android:layout_margin="15dp"
         android:layout_marginStart="18dp"
         android:layout_marginEnd="18dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/submit_btn_background"
         android:gravity="center"
         android:text="Add another address"
         android:textColor="@color/colorWhite"

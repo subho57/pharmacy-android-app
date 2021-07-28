@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -236,7 +235,7 @@ public class HomeFragment extends Fragment
 
   @Override
   public void onLongClickItem(View v, int position) {
-    Log.e("posiotn", "" + position);
+    // Log.e("posiotn", "" + position);
   }
 
   @Override

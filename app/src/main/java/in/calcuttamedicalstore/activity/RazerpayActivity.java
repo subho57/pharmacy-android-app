@@ -2,7 +2,6 @@ package in.calcuttamedicalstore.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -82,7 +81,7 @@ public class RazerpayActivity extends AppCompatActivity implements PaymentResult
       co.open(activity, options);
     } catch (Exception e) {
       Toast.makeText(activity, "Error in payment: " + e.getMessage(), Toast.LENGTH_LONG).show();
-      Log.e(TAG, "Error in starting Razorpay Checkout", e);
+      // Log.e(TAG, "Error in starting Razorpay Checkout", e);
       e.printStackTrace();
     }
   }
@@ -108,7 +107,7 @@ public class RazerpayActivity extends AppCompatActivity implements PaymentResult
       Toast.makeText(this, "Payment Successful: " + s, Toast.LENGTH_SHORT).show();
       finish();
     } catch (Exception e) {
-      Log.e(TAG, "Exception in onPaymentSuccess", e);
+      // Log.e(TAG, "Exception in onPaymentSuccess", e);
     }
   }
 
@@ -123,7 +122,7 @@ public class RazerpayActivity extends AppCompatActivity implements PaymentResult
       Toast.makeText(this, "Payment failed: " + i + " " + s, Toast.LENGTH_SHORT).show();
       finish();
     } catch (Exception e) {
-      Log.e(TAG, "Exception in onPaymentError", e);
+      // Log.e(TAG, "Exception in onPaymentError", e);
     }
   }
 }

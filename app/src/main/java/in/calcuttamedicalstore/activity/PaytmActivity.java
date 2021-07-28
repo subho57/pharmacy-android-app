@@ -2,7 +2,6 @@ package in.calcuttamedicalstore.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -93,7 +92,7 @@ public class PaytmActivity extends AppCompatActivity implements GetResult.MyList
                         "Payment Transaction response " + bundle.toString(),
                         Toast.LENGTH_LONG)
                     .show();
-                Log.e(TAG, "Response (onTransactionResponse) : ");
+                // Log.e(TAG, "Response (onTransactionResponse) : ");
                 if (bundle != null) {
                   tragectionID = bundle.get("BANKTXNID").toString();
                   paymentsucsses = 1;

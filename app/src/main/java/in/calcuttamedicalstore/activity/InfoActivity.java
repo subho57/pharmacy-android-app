@@ -3,7 +3,6 @@ package in.calcuttamedicalstore.activity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -149,7 +148,7 @@ public class InfoActivity extends AppCompatActivity {
 
     @Override
     public CharSequence getPageTitle(int position) {
-      Log.e("page", "" + position);
+      // Log.e("page", "" + position);
       return "Page " + position;
     }
 

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.provider.Settings;
-import android.util.Log;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -36,7 +35,7 @@ public class Utiles {
     @SuppressLint("HardwareIds")
     String unique_id =
         Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
-    Log.e("unique_id", "-->" + unique_id);
+    // Log.e("unique_id", "-->" + unique_id);
     return unique_id;
   }
 

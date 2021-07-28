@@ -60,8 +60,8 @@ public interface UserService {
   @POST(APIClient.APPEND_URL + "rate.php")
   Call<JsonObject> rates(@Body JsonObject object);
 
-//  @POST(APIClient.APPEND_URL + "status.php")
-//  Call<JsonObject> getStatus(@Body JsonObject object);
+  //  @POST(APIClient.APPEND_URL + "status.php")
+  //  Call<JsonObject> getStatus(@Body JsonObject object);
 
   @POST(APIClient.APPEND_URL + "noti.php")
   Call<JsonObject> getNoti(@Body JsonObject object);

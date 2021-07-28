@@ -15,7 +15,6 @@ public class SessionManager {
   public static final String isopen = "isopen";
   public static final String userdata = "Userdata";
   public static final String address1 = "address";
-  public static boolean iscart = false;
   public static final String area = "area";
   public static final String currncy = "currncy";
   public static final String privacy = "privacy_policy";
@@ -30,6 +29,7 @@ public class SessionManager {
   public static final String COUPON = "coupon";
   public static final String COUPONID = "couponid";
   public static final String WALLET = "wallet";
+  public static boolean iscart = false;
   private final SharedPreferences mPrefs;
   SharedPreferences.Editor mEditor;
 

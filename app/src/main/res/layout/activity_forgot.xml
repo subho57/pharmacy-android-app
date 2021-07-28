@@ -109,10 +109,10 @@
                         android:layout_height="wrap_content"
                         android:autofillHints="mobile"
                         android:background="@drawable/rounded_editetext"
+                        android:hint="Mobile"
                         android:inputType="phone"
                         android:maxLength="10"
                         android:padding="10dp"
-                        android:hint="Mobile"
                         android:textColor="@color/colorGrey2" />
                 </LinearLayout>
             </LinearLayout>
